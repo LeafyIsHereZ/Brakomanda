@@ -1,0 +1,919 @@
+<!-- Written By Ahmad Frendi -->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Rapid7 Blog</title>
+    <meta name="robots" content="index, follow">    
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=215c862f81" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/annimate.min.css?v=215c862f81" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/prettycode-min.css?v=215c862f81" />
+    <script src="//js.maxmind.com/js/apis/geoip2/v2.1/geoip2.js" type="text/javascript"></script>
+    <script src="https://rapid7.com/includes/js/populateCountryState.js"></script>
+
+
+    <script>
+      dataLayer = [];
+    </script>
+    <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-WBTPTVC');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <meta name="description" content="Rapid7 transforms data into insight, empowering security professionals to progress and protect their organizations." />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="https://blog.rapid7.com/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="next" href="https://blog.rapid7.com/page/2/" />
+    
+    <meta property="og:site_name" content="Rapid7 Blog" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Rapid7 Blog" />
+    <meta property="og:description" content="Rapid7 transforms data into insight, empowering security professionals to progress and protect their organizations." />
+    <meta property="og:url" content="https://blog.rapid7.com/" />
+    <meta property="og:image" content="https://blog.rapid7.com/content/images/2017/08/rapid7-og-1.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rapid7 Blog" />
+    <meta name="twitter:description" content="Rapid7 transforms data into insight, empowering security professionals to progress and protect their organizations." />
+    <meta name="twitter:url" content="https://blog.rapid7.com/" />
+    <meta name="twitter:image" content="https://blog.rapid7.com/content/images/2017/08/rapid7-og-1.jpg" />
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="400" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Rapid7 Blog",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://blog.rapid7.com/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "url": "https://blog.rapid7.com/",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://blog.rapid7.com/content/images/2017/08/rapid7-og-1.jpg",
+        "width": 700,
+        "height": 400
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://blog.rapid7.com/"
+    },
+    "description": "Rapid7 transforms data into insight, empowering security professionals to progress and protect their organizations."
+}
+    </script>
+
+    <script type="text/javascript" src="/public/ghost-sdk.min.js?v=215c862f81"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "59a2130c5b51"
+});
+</script>
+    <meta name="generator" content="Ghost 1.21" />
+    <link rel="alternate" type="application/rss+xml" title="Rapid7 Blog" href="https://blog.rapid7.com/rss/" />
+</head>
+<body class="home-template">
+
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBTPTVC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->  
+
+    <div id="__"></div>
+
+    <div id="gdprAlert" class="overlay">
+        <div class="gdpr-modal">
+            <div>
+                <h2>Quick Cookie Notification</h2>
+                <p>This site uses cookies, including for analytics, personalization, and advertising purposes.  For more information or to change your cookie settings, <a href="https://www.rapid7.com/privacy-policy/tracking-technologies/" target="_blank">click here</a>.  <br /><br />If you continue to browse this site without changing your cookie settings, you agree to this use.</p>
+                <button class="button mdBtn blue" id="gdprClose">I AGREE, LET’S GO!</button>
+                <hr>
+                <p class="fineprint">View <a href="https://www.rapid7.com/privacy-policy/tracking-technologies/" target="_blank">Cookie Policy</a> for full details</p>
+            </div>
+
+        </div>
+    </div> 
+    <script>document.getElementById('gdprAlert').style.display = 'none';</script>
+
+    <!--[if lte IE 10]>
+    <div id="ie-conditional"><spa>Your IE browser is out of date - Upgrade to the latest version of IE or Chrome for an optimal website experience.</span> <a href="https://support.microsoft.com/en-us/help/17621/internet-explorer-downloads" title="Upgrade IE Now" class="button smBtn darkClear" target="_blank">Upgrade IE Now</a>
+    <button class="close-button" type="button" id="closeIEBar">
+        <img src="../includes/img/close_white.svg">
+    </button>
+    </div>
+    <![endif]-->
+
+    <div id="search-overlay">
+        <input type="text" placeholder="Search all the blog things..." class="typeahead" />
+        <img src="/assets/images/close-white.svg?v=215c862f81" width="20" height="20" class="close-modal" />
+    </div>
+
+    <div class="reveal large" id="community-message" data-reveal data-close-on-click="false" data-close-on-esc="false">
+        <h2>We've updated Rapid7’s community resources</h2>
+        <h3>Hello. We've evolved our community resources to provide a richer experience. <a href="/">Learn more</a>. <br>Questions? <a href="mailto: community@rapid7.com">Contact us</a>.</h3>
+        <div class="row expanded" >
+            <div data-equalizer data-equalize-on="medium">
+                <div class="columns medium-12 large-6">
+                    <div class="box-item" data-equalizer-watch>
+                        <div class="box-heading">
+                            blog.rapid7.com
+                        </div>
+                        <div class="box-content">
+                            <h4>Blogs, How-tos, &amp; Research</h4>
+                            <p>Our new blog will still publish the same cutting-edge research, analysis, and commentary you expect from Rapid7.</p>
+                            <a href="/" class="button mdBtn blue">Explore the Blog</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns medium-12 large-6">
+                    <div class="box-item" data-equalizer-watch>
+                        <div class="box-heading">
+                            help.rapid7.com
+                        </div>
+                        <div class="box-content">
+                            <h4>Docs, Help, &amp; Questions</h4>
+                            <p>Help content and documents are now curated to let you get the information you need even faster.</p>
+                            <a href="https://help.rapid7.com" class="button mdBtn blue">Explore Help</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    
+    
+    
+    <section>
+        <header data-bg="/content/images/2018/12/rapid7-hero-industry-cyber-exposure-report-dark4.jpg" class="animated fadeIn">
+            <div id="top-nav">
+                <div class="row expanded">
+                    <div id="logo" class="">
+                        <a class="logo-block" href="https://www.rapid7.com/"><img src="https://www.rapid7.com/includes/img/Rapid7_logo.svg" alt="Rapdi7" width="148" /></a>
+                        <a class="logo-title" href="https://blog.rapid7.com" title="Rapid7 Blog">Blog</a>
+                    </div>
+                    <div class="utility-nav">
+    <div class="search-box">
+        <img src="/assets/images/search.svg" alt="" width="28" height="27" />
+    </div>
+    <!-- <a href="#" class="categories-drop-menu-trigger">Categories</a>
+    <ul class="category-drop-menu">
+        <li><a href="https://blog.rapid7.com/tag/insightops/">Research</a></li>
+    </ul> -->
+    <a href="/tag/" title="View All Tags">View All Tags</a>
+</div>
+                </div>
+            </div>
+            <div id="hero">
+                <div class="row expanded">
+                    <div class="columns medium-10 medium-offset-1 large-8 large-offset-2">
+                        <h4>Featured</h4>
+                        <h1><a href="/2018/12/11/rapid7-introduces-industry-cyber-exposure-report-fortune-500/" title="Rapid7 Introduces Industry Cyber-Exposure Report: Fortune 500">Rapid7 Introduces Industry Cyber-Exposure Report: Fortune 500</a></h1>
+                        <a href="/2018/12/11/rapid7-introduces-industry-cyber-exposure-report-fortune-500/" class="button lgBtn blue">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+</section>
+
+<div class="featured-posts animated fadeIn">
+    <div class="row expanded" data-equalizer="featured-posts" data-equalize-on="medium">
+                <div class="columns medium-12 large-4 ">
+                    <div class="featured-post">
+                        <div class="row expanded">
+                            <div class="columns medium-6"> 
+                                <div class="img" data-bg="/content/images/2018/12/Ocean-1.jpg" data-equalizer-watch="featured-posts">
+                                    <div class="details-bar">
+                                        <div class="right-items">
+                                            <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/#disqus_thread" class="comment-count" data-disqus-identifier="5c1cf203fb51f306c3cb748a"></a>
+                                        </div>
+                                        <div class="read-time">
+                                            <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/">12 min read</a>
+                                        </div>
+                                        <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/" title="Read Rsunk your Battleship: An Ocean of Data Exposed through Rsync" class="wrapper-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns medium-6"> 
+                                <div class="content" data-equalizer-watch="featured-posts">
+                                    <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/" title="Read Rsunk your Battleship: An Ocean of Data Exposed through Rsync"><h3>Rsunk your Battleship: An Ocean of Data Exposed through Rsync</h3></a>
+                                    <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/2018/12/21/rsunk-your-battleship-an-ocean-of-data-exposed-through-rsync/" class="wrapper-link"></a>
+                    </div>
+                </div>
+                <div class="columns medium-12 large-4 ">
+                    <div class="featured-post">
+                        <div class="row expanded">
+                            <div class="columns medium-6"> 
+                                <div class="img" data-bg="/content/images/2018/12/Desk.jpg" data-equalizer-watch="featured-posts">
+                                    <div class="details-bar">
+                                        <div class="right-items">
+                                            <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/#disqus_thread" class="comment-count" data-disqus-identifier="5c059407fb51f306c3cb7416"></a>
+                                        </div>
+                                        <div class="read-time">
+                                            <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/">4 min read</a>
+                                        </div>
+                                        <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/" title="Read Did You Remediate That? New InsightVM Executive Report Provides Key Details on Team Progress" class="wrapper-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns medium-6"> 
+                                <div class="content" data-equalizer-watch="featured-posts">
+                                    <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/" title="Read Did You Remediate That? New InsightVM Executive Report Provides Key Details on Team Progress"><h3>Did You Remediate That? New InsightVM Executive Report Provides Key Details on Team Progress</h3></a>
+                                    <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/2018/12/04/did-you-remediate-that-how-the-new-insightvm-executive-report-provides-key-details-on-team-progress/" class="wrapper-link"></a>
+                    </div>
+                </div>
+                <div class="columns medium-12 large-4  end">
+                    <div class="featured-post">
+                        <div class="row expanded">
+                            <div class="columns medium-6"> 
+                                <div class="img" data-bg="/content/images/2018/11/Lock.jpg" data-equalizer-watch="featured-posts">
+                                    <div class="details-bar">
+                                        <div class="right-items">
+                                            <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/#disqus_thread" class="comment-count" data-disqus-identifier="5c0191ecfb51f306c3cb7404"></a>
+                                        </div>
+                                        <div class="read-time">
+                                            <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/">4 min read</a>
+                                        </div>
+                                        <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/" title="Read How Your Organization Can Respond After News of a Major Security Breach" class="wrapper-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="columns medium-6"> 
+                                <div class="content" data-equalizer-watch="featured-posts">
+                                    <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/" title="Read How Your Organization Can Respond After News of a Major Security Breach"><h3>How Your Organization Can Respond After News of a Major Security Breach</h3></a>
+                                    <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="/2018/11/30/how-your-organization-can-respond-after-news-of-a-major-security-breach/" class="wrapper-link"></a>
+                    </div>
+                </div>
+    </div>
+</div>
+    
+    <div class="byline-bar">
+    <div class="row expanded">
+        <div class="columns medium-10 medium-offset-1">
+            <div class="post-order"><a href="/tag/" title="View All Tags">View All Tags</a></div>
+            <div class="tag-row">
+    <h4>Popular Tags:</h4>
+    <ul>
+        <li><a href="/tag/metasploit/" title="Metasploit">metasploit</a></li>
+        <li><a href="/tag/nexpose/" title="Nexpose">nexpose</a></li>
+        <li><a href="/tag/it-ops/" title="IT Ops">IT Ops</a></li>
+        <li><a href="/tag/iot/" title="IoT">IoT</a></li>
+        <li><a href="/tag/exploits/" title="Exploits">Exploits</a></li>
+		<li><a href="/tag/insightidr/" title="InsightIDR">InsightIDR</a></li>
+		<li><a href="/tag/gdpr/" title="GDPR">GDPR</a></li>
+    </ul>
+</div>        </div>
+    </div>
+</div>
+    <div class="content_main">
+        <div class="row expanded">
+            <div class="columns medium-10 medium-offset-1 post-cards">
+                <div class="post-card" data-equalizer="post-0" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/21/metasploit-wrapup-70/">
+                    <div class="card-img" data-bg="/content/images/2018/12/metasploit-ascii-1.png" data-equalizer-watch="post-0"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/21/metasploit-wrapup-70/#disqus_thread" class="comment-count" data-disqus-identifier="5c1d1e24fb51f306c3cb74a6"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/21/metasploit-wrapup-70/">2 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-0">
+                <h2><a href="/2018/12/21/metasploit-wrapup-70/">Metasploit Wrapup</a></h2>
+                <p>Safari Proxy Object Type Confusion Metasploit committer timwr recently added a macOS Safari RCE exploit module based on a solution that saelo developed and used successfully at Pwn2Own 2018. saelo's exploit is a three-bug chain: a Safari RCE (CVE-2018-4233), a sandbox escape (CVE-2018-4404), and a&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/sonny-gonzalez/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2018/02/sonny-gonzalez.jpg" alt="Sonny Gonzalez" />
+                        </div>
+                        <span>Sonny Gonzalez</span>
+                    </a>
+                    <a href="/2018/12/21/metasploit-wrapup-70/" class="post-date">
+                        <span >Dec 21, 2018</span>
+                    </a>
+                        <a href="/tag/metasploit-weekly-wrapup/" title="Metasploit Weekly Wrapup" class="post-tags">
+                            <span class="last">Metasploit Weekly Wrapup</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-2" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/20/did-you-remediate-that-how-to-use-the-insightvm-policy-compliance-status-report-to-measure-benchmark-configurations/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Ruler.jpg" data-equalizer-watch="post-2"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/20/did-you-remediate-that-how-to-use-the-insightvm-policy-compliance-status-report-to-measure-benchmark-configurations/#disqus_thread" class="comment-count" data-disqus-identifier="5c1ab560fb51f306c3cb7484"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/20/did-you-remediate-that-how-to-use-the-insightvm-policy-compliance-status-report-to-measure-benchmark-configurations/">3 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-2">
+                <h2><a href="/2018/12/20/did-you-remediate-that-how-to-use-the-insightvm-policy-compliance-status-report-to-measure-benchmark-configurations/">Did You Remediate That? How to Use the InsightVM Policy Compliance Status Report to Measure Benchmark Configurations</a></h2>
+                <p>Reports within InsightVM can help you demonstrate whether your systems stand up against compliance requirements.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/jesika/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/assets/images/default-author-image.png" alt="Jesika McEvoy" />
+                        </div>
+                        <span>Jesika McEvoy</span>
+                    </a>
+                    <a href="/2018/12/20/did-you-remediate-that-how-to-use-the-insightvm-policy-compliance-status-report-to-measure-benchmark-configurations/" class="post-date">
+                        <span >Dec 20, 2018</span>
+                    </a>
+                        <a href="/tag/insightvm/" title="InsightVM" class="post-tags">
+                            <span class="last">InsightVM</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-3" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/19/rapid7-partners-with-aws-security-hub-for-deeper-vulnerability-reporting/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Orange_Lights.jpg" data-equalizer-watch="post-3"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/19/rapid7-partners-with-aws-security-hub-for-deeper-vulnerability-reporting/#disqus_thread" class="comment-count" data-disqus-identifier="5c196409fb51f306c3cb747a"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/19/rapid7-partners-with-aws-security-hub-for-deeper-vulnerability-reporting/">2 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-3">
+                <h2><a href="/2018/12/19/rapid7-partners-with-aws-security-hub-for-deeper-vulnerability-reporting/">Rapid7 Partners with AWS Security Hub for Deeper Vulnerability Reporting</a></h2>
+                <p>Last month, we were thrilled to announce our integration with AWS Security Hub at AWS re:Invent.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/alfred-chung/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2018/01/alfred-chung.jpg" alt="Alfred Chung" />
+                        </div>
+                        <span>Alfred Chung</span>
+                    </a>
+                    <a href="/2018/12/19/rapid7-partners-with-aws-security-hub-for-deeper-vulnerability-reporting/" class="post-date">
+                        <span >Dec 19, 2018</span>
+                    </a>
+                        <a href="/tag/aws/" title="AWS" class="post-tags">
+                            <span class="last">AWS</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-4" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/18/windows-event-forwarding-the-best-thing-youve-never-heard-of/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Forwarding.jpg" data-equalizer-watch="post-4"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/18/windows-event-forwarding-the-best-thing-youve-never-heard-of/#disqus_thread" class="comment-count" data-disqus-identifier="5c17cad5fb51f306c3cb746c"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/18/windows-event-forwarding-the-best-thing-youve-never-heard-of/">6 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-4">
+                <h2><a href="/2018/12/18/windows-event-forwarding-the-best-thing-youve-never-heard-of/">Windows Event Forwarding: The Best Thing You’ve Never Heard Of</a></h2>
+                <p>This blog post will discuss how to get logs into your SIEM and create custom alerts to detect certain behaviors in those logs.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/josh/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2018/09/Hacker2.jpg" alt="Josh Frantz" />
+                        </div>
+                        <span>Josh Frantz</span>
+                    </a>
+                    <a href="/2018/12/18/windows-event-forwarding-the-best-thing-youve-never-heard-of/" class="post-date">
+                        <span >Dec 18, 2018</span>
+                    </a>
+                        <a href="/tag/incident-response/" title="Incident Response" class="post-tags">
+                            <span class="last">Incident Response</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-5" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/17/charting-the-forthcoming-phpocalypse-in-2019/">
+                    <div class="card-img" data-bg="/content/images/2018/12/PHP.jpg" data-equalizer-watch="post-5"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/17/charting-the-forthcoming-phpocalypse-in-2019/#disqus_thread" class="comment-count" data-disqus-identifier="5bf2d9fafb51f306c3cb73bc"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/17/charting-the-forthcoming-phpocalypse-in-2019/">1 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-5">
+                <h2><a href="/2018/12/17/charting-the-forthcoming-phpocalypse-in-2019/">Charting the Forthcoming PHPocalypse in 2019</a></h2>
+                <p>This experiment began when Josh Frantz remarked that he would be curious about the potential exposure from the just-reached EOL date for PHP Version 7.0 and the forthcoming EOL date for PHP 5.6.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/bob-rudis/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="https://rapid7.com/globalassets/_images/blog-author-images/author-icon-29826.png" alt="boB Rudis" />
+                        </div>
+                        <span>boB Rudis</span>
+                    </a>
+                    <a href="/2018/12/17/charting-the-forthcoming-phpocalypse-in-2019/" class="post-date">
+                        <span >Dec 17, 2018</span>
+                    </a>
+                        <a href="/tag/research/" title="Research" class="post-tags">
+                            <span class="last">Research</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-6" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/14/metasploit-wrapup-69/">
+                    <div class="card-img" data-bg="/content/images/2018/12/metasploit-blg-2-small.png" data-equalizer-watch="post-6"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/14/metasploit-wrapup-69/#disqus_thread" class="comment-count" data-disqus-identifier="5c13e6b2fb51f306c3cb7462"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/14/metasploit-wrapup-69/">2 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-6">
+                <h2><a href="/2018/12/14/metasploit-wrapup-69/">Metasploit Wrapup</a></h2>
+                <p>Backups that Cause Problems hypn0s contributed a module that exploits Snap Creek’s Duplicator plugin for WordPress. Duplicator is a plugin that eases the backup and migration of WordPress installations. For versions 1.2.40 and below, Duplicator leaves behind a number of sensitive files,&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/shelby/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2018/08/rocket.jpeg" alt="Shelby Pace" />
+                        </div>
+                        <span>Shelby Pace</span>
+                    </a>
+                    <a href="/2018/12/14/metasploit-wrapup-69/" class="post-date">
+                        <span >Dec 14, 2018</span>
+                    </a>
+                        <a href="/tag/metasploit-weekly-wrapup/" title="Metasploit Weekly Wrapup" class="post-tags">
+                            <span class="last">Metasploit Weekly Wrapup</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-7" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/14/securing-buckets-with-amazon-s3-block-public-access/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Buckets.jpg" data-equalizer-watch="post-7"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/14/securing-buckets-with-amazon-s3-block-public-access/#disqus_thread" class="comment-count" data-disqus-identifier="5c12c070fb51f306c3cb745f"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/14/securing-buckets-with-amazon-s3-block-public-access/">4 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-7">
+                <h2><a href="/2018/12/14/securing-buckets-with-amazon-s3-block-public-access/">Securing Buckets with Amazon S3 Block Public Access</a></h2>
+                <p>Amazon Web Services recently introduced a new security enhancement to its cloud storage service: Amazon S3 Block Public Access.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/rapid7/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2017/09/rapid7-1.png" alt="Rapid7" />
+                        </div>
+                        <span>Rapid7</span>
+                    </a>
+                    <a href="/2018/12/14/securing-buckets-with-amazon-s3-block-public-access/" class="post-date">
+                        <span >Dec 14, 2018</span>
+                    </a>
+                        <a href="/tag/aws/" title="AWS" class="post-tags">
+                            <span class="last">AWS</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-8" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/13/q3-threat-report-analyzing-three-key-detection-trends/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Fire_Detection.jpg" data-equalizer-watch="post-8"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/13/q3-threat-report-analyzing-three-key-detection-trends/#disqus_thread" class="comment-count" data-disqus-identifier="5c115fd1fb51f306c3cb7458"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/13/q3-threat-report-analyzing-three-key-detection-trends/">5 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-8">
+                <h2><a href="/2018/12/13/q3-threat-report-analyzing-three-key-detection-trends/">Q3 Threat Report: Analyzing Three Key Detection Trends</a></h2>
+                <p>In this post, we will review findings from our 2018 Q3 Threat Report, including common attack types, the Emotet malware, and protocol poisoning.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/eric-sun/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="https://rapid7.com/globalassets/_images/blog-author-images/author-icon-26212.png" alt="Eric Sun" />
+                        </div>
+                        <span>Eric Sun</span>
+                    </a>
+                    <a href="/2018/12/13/q3-threat-report-analyzing-three-key-detection-trends/" class="post-date">
+                        <span >Dec 13, 2018</span>
+                    </a>
+                        <a href="/tag/research/" title="Research" class="post-tags">
+                            <span class="last">Research</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-9" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/12/how-rapid7-researchers-used-data-science-to-wrangle-messy-whois-data/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Lasso.jpg" data-equalizer-watch="post-9"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/12/how-rapid7-researchers-used-data-science-to-wrangle-messy-whois-data/#disqus_thread" class="comment-count" data-disqus-identifier="5c101b76fb51f306c3cb7448"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/12/how-rapid7-researchers-used-data-science-to-wrangle-messy-whois-data/">5 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-9">
+                <h2><a href="/2018/12/12/how-rapid7-researchers-used-data-science-to-wrangle-messy-whois-data/">How Rapid7 Researchers Used Data Science to Wrangle Messy WHOIS Data</a></h2>
+                <p>As part of our research for the Industry Cyber-Exposure Report: Fortune 500, we attempted to quantify the public exposure of various organizations.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/kwan/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2018/12/kwan_headshot_professional.jpg" alt="Kwan Lin" />
+                        </div>
+                        <span>Kwan Lin</span>
+                    </a>
+                    <a href="/2018/12/12/how-rapid7-researchers-used-data-science-to-wrangle-messy-whois-data/" class="post-date">
+                        <span >Dec 12, 2018</span>
+                    </a>
+                        <a href="/tag/research/" title="Research" class="post-tags">
+                            <span class="last">Research</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-10" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/11/patch-tuesday-december-2018/">
+                    <div class="card-img" data-bg="/content/images/2018/12/patches-2.jpg" data-equalizer-watch="post-10"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/11/patch-tuesday-december-2018/#disqus_thread" class="comment-count" data-disqus-identifier="5c10155efb51f306c3cb7445"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/11/patch-tuesday-december-2018/">1 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-10">
+                <h2><a href="/2018/12/11/patch-tuesday-december-2018/">Patch Tuesday - December 2018</a></h2>
+                <p>It's the last Patch Tuesday of 2018! As is often the case in December, it's a relatively light one with &quot;only&quot; 38 CVEs. (Every other month in 2018 clocked in with at least 50 patched vulnerabilities.) This is in addition to the two&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/greg-wiseman/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="https://rapid7.com/globalassets/_images/blog-author-images/author-icon-19733.png" alt="Greg Wiseman" />
+                        </div>
+                        <span>Greg Wiseman</span>
+                    </a>
+                    <a href="/2018/12/11/patch-tuesday-december-2018/" class="post-date">
+                        <span >Dec 11, 2018</span>
+                    </a>
+                        <a href="/tag/patch-tuesday/" title="Patch Tuesday" class="post-tags">
+                            <span class="last">Patch Tuesday</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-12" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/07/metasploit-wrapup-68/">
+                    <div class="card-img" data-bg="/content/images/2018/12/metasploit-blg-3-copy.png" data-equalizer-watch="post-12"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/07/metasploit-wrapup-68/#disqus_thread" class="comment-count" data-disqus-identifier="5c0acc83fb51f306c3cb7430"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/07/metasploit-wrapup-68/">2 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-12">
+                <h2><a href="/2018/12/07/metasploit-wrapup-68/">Metasploit Wrapup</a></h2>
+                <p>If you are tired of all the snake memes and images we pushed out as we stood up support for python external modules over the last year or so, I have terrific news for you!&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/brendan-watters/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2017/11/brendan-watters.png" alt="Brendan Watters" />
+                        </div>
+                        <span>Brendan Watters</span>
+                    </a>
+                    <a href="/2018/12/07/metasploit-wrapup-68/" class="post-date">
+                        <span >Dec 07, 2018</span>
+                    </a>
+                        <a href="/tag/metasploit/" title="Metasploit" class="post-tags">
+                            <span class="last">Metasploit</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-13" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/06/single-page-applications-the-journey-so-far/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Road.jpeg" data-equalizer-watch="post-13"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/06/single-page-applications-the-journey-so-far/#disqus_thread" class="comment-count" data-disqus-identifier="5c082315fb51f306c3cb7429"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/06/single-page-applications-the-journey-so-far/">3 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-13">
+                <h2><a href="/2018/12/06/single-page-applications-the-journey-so-far/">Single-Page Applications: The Journey So Far</a></h2>
+                <p>While modern web application technology has made apps more useful, it's also made them harder to secure.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/mark-hamill/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="https://rapid7.com/globalassets/_images/blog-author-images/author-icon-30478.png" alt="Mark Hamill" />
+                        </div>
+                        <span>Mark Hamill</span>
+                    </a>
+                    <a href="/2018/12/06/single-page-applications-the-journey-so-far/" class="post-date">
+                        <span >Dec 06, 2018</span>
+                    </a>
+                        <a href="/tag/application-security/" title="Application Security" class="post-tags">
+                            <span class="last">Application Security</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="post-card" data-equalizer="post-14" data-equalize-on="medium">
+    <div class="row expanded">
+        <div class="columns medium-4">
+            <div class="image-wrapper">
+                <a href="/2018/12/04/seeing-security-scale-rapid7s-recap-of-aws-re-invent-2018/">
+                    <div class="card-img" data-bg="/content/images/2018/12/Happy-Hour-1.JPG" data-equalizer-watch="post-14"></div>
+                </a>
+                <div class="details-bar">
+                    <div class="right-items">
+                        <a href="https://blog.rapid7.com/2018/12/04/seeing-security-scale-rapid7s-recap-of-aws-re-invent-2018/#disqus_thread" class="comment-count" data-disqus-identifier="5c06b012fb51f306c3cb7422"></a>
+                    </div>
+                    <div class="read-time">
+                        <a href="/2018/12/04/seeing-security-scale-rapid7s-recap-of-aws-re-invent-2018/">3 min read</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="columns medium-8 end">
+            <div class="card-content" data-equalizer-watch="post-14">
+                <h2><a href="/2018/12/04/seeing-security-scale-rapid7s-recap-of-aws-re-invent-2018/">Seeing Security Scale: Rapid7’s Recap of AWS re:Invent 2018</a></h2>
+                <p>In this post, I will detail my time at AWS re:Invent and provide observations about how security plays a role in our cloud journey.&hellip;</p>
+                <div class="byline-row">
+                    <a href="/author/jay-brewer/" class="post-author">
+                        <div class="author-image-wrapper">
+                            <img src="/content/images/2017/10/jay-brewer-li.jpg" alt="Jay Brewer" />
+                        </div>
+                        <span>Jay Brewer</span>
+                    </a>
+                    <a href="/2018/12/04/seeing-security-scale-rapid7s-recap-of-aws-re-invent-2018/" class="post-date">
+                        <span >Dec 04, 2018</span>
+                    </a>
+                        <a href="/tag/aws/" title="AWS" class="post-tags">
+                            <span class="last">AWS</span>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="pagination-row">
+    <div class="row expanded">
+        <div class="columns medium-10 medium-offset-1 text-center">
+            <div>
+                <a href="/page/2/" class="button mdBtn clear">More Posts</a>
+            </div>
+        </div>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+
+   <!--  <div id="bottom-content-row" data-equalizer="bottom-content-item-top" data-equalize-on="medium">
+        <div class="row expanded">
+            <div class="columns medium-10 medium-offset-1">
+                <div data-equalizer="bottom-content-item-bottom" data-equalize-on="medium">
+                    <div class="row expanded">
+
+                        <div class="columns medium-4 post-card" id="blog-bottom-content-1">
+                            <div class="post-top" data-equalizer-watch="bottom-content-item-top">
+                                <a href="https://www.rapid7.com/info/national-exposure-index" target="_blank" title="National Exposure Index 2018"><div class="card-img" data-bg="https://www.rapid7.com/globalassets/_images/blog-post-images/nei-hero-2018.jpg"></div></a>
+                            </div>
+                            <div class="post-bottom">
+                                <div class="card-content" data-equalizer-watch="bottom-content-item-bottom">
+                                    <h3>Featured Research</h3>
+                                    <h2><a href="https://www.rapid7.com/info/national-exposure-index" target="_blank" title="National Exposure Index 2018">National Exposure Index 2018</a></h2>
+                                    <p>The National Exposure Index is an exploration of data derived from Project Sonar, Rapid7's security research project that gains insights into global exposure to common vulnerabilities through internet-wide surveys.</p>
+                                    <a href="https://www.rapid7.com/info/national-exposure-index" target="_blank" class="button mdBtn clear">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns medium-4 post-card" id="blog-bottom-content-2">
+                            <div class="post-top" data-equalizer-watch="bottom-content-item-top">
+                                <a href="https://information.rapid7.com/gartner-make-your-siem-successful.html " title="Make Your SIEM Project a Success with Rapid7" target="_blank"><div class="card-img" data-bg="https://www.rapid7.com/globalassets/_images/blog-post-images/siem-banner.jpg"></div></a>
+                            </div>
+                            <div class="post-bottom">
+                                <div class="card-content" data-equalizer-watch="bottom-content-item-bottom">
+                                    <h3>Toolkit</h3>
+                                    <h2><a href="https://information.rapid7.com/gartner-make-your-siem-successful.html " target="_blank" title="Make Your SIEM Project a Success with Rapid7">Make Your SIEM Project a Success with Rapid7</a></h2>
+                                    <p>In this toolkit, get access to Gartner's report “Overcoming Common Causes for SIEM Solution Deployment Failures,” which details why organizations are struggling to unify their data and find answers from it. Also get the Rapid7 companion guide with helpful recommendations on approaching your SIEM needs.</p>
+                                    <a href="https://information.rapid7.com/gartner-make-your-siem-successful.html " target="_blank" class="button mdBtn clear">Download Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="columns medium-4 post-card" id="blog-bottom-content-3">
+                            <div class="post-top" data-equalizer-watch="bottom-content-item-top">
+                                <a href="https://www.rapid7.com/info/threat-report/" target="_blank" title="Quarterly Threat Report"><div class="card-img" data-bg="https://www.rapid7.com/contentassets/fb04de9d54f64410ab183de609b390b8/long-heromd-for-web.jpg"></div></a>
+                            </div>
+                            <div class="post-bottom">
+                                <div class="card-content" data-equalizer-watch="bottom-content-item-bottom">
+                                    <h3>Featured Research</h3>
+                                    <h2><a href="https://www.rapid7.com/info/threat-report/" target="_blank" title="Quarterly Threat Report">Quarterly Threat Report</a></h2>
+                                    <p>Rapid7’s Quarterly Threat Report leverages intelligence from our extensive network—including the Insight platform, managed detection and response engagements, Project Sonar, Heisenberg Cloud, and the Metasploit community—to put today’s shifting threat landscape into perspective. It gives you a clear picture of the threats that you face within your unique industry, and how those threats change throughout the year.</p>
+                                    <a href="https://www.rapid7.com/info/threat-report/" target="_blank" class="button mdBtn clear">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="subscribe-row">
+        <div class="row expanded">
+            <div class="columns medium-12" id="subscribe-content">
+               <!--  <h3>Get Blog Updates</h3>
+                <input type="text" placeholder="Email Address" />
+                <a hrer="#subscribe-now" class="button smBtn darkClear">Subscribe Now</a> -->
+                <h4 class="blog-feed"><a href="https://blog.rapid7.com/feed/" target="_blank">Blog Feed</a></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row expanded backToTop scroll text-center">
+        <a href="#__" class="smooth">
+            <img src="/assets/images/up-arrow.png?v=215c862f81">
+        </a>
+    </div>
+
+    <footer class="footer clearfix">
+        <div class="row expanded">
+            <div class="columns medium-10 medium-offset-1">
+                <div class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Rapid7</div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="https://www.rapid7.com/legal" title="Legal Terms">Legal Terms</a></li>
+                        <li><a href="https://www.rapid7.com/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
+                        <li><a href="https://www.rapid7.com/export-notice" title="Export Notice">Export Notice</a></li>
+                        <li><a href="https://www.rapid7.com/trust" title="Trust">Trust</a></li>   
+                        <li><a href="https://www.rapid7.com/contact" title="Conact Us">Contact Us</a></li>
+                        <li><a href="https://www.rapid7.com/careers" title="Careers">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="https://www.rapid7.com/includes/js/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="/assets/js/all.js?v=215c862f81"></script>
+    <script type="text/javascript" id="dsq-count-scr" src="https://rapid7.disqus.com/count.js" async></script>
+
+
+</body>
+</html>
